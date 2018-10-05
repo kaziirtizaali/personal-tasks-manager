@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ONLINE -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- OFFLINE -->
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Start Header -->
+        <div class="jumbotron" style="margin-bottom: 0px">
+            <div class="container">
+                <h1>Personal Tasks Manager</h1>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Slide Image using carousal -->
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active" style="background-color:	#FFFFFD">
+                    <img class="img-responsive center-block" src="assets/images/todolist1.jpg" alt="To Do List">                    
+                </div>
+                <div class="item" style="background-color:#6DC382">
+                    <img class="img-responsive center-block" src="assets/images/getnotified.png" alt="Get Notified">
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- End Slide Image using carousal -->
+
+        <!-- Button position start -->
+        <br>
+        <br>
+        <div class="container " style="text-align: center">
+            <h4 align="center ">PLEASE SIGN IN OR SIGN UP TO CONTINUE</h4>
+        </div>
+        <br>
+
+        <div class="container " style=" text-align: center ">
+            <button type="button" class="btn btn-success btn-lg " name="signInButton " data-toggle="modal" data-target="#signInWindow">
+                SIGN IN
+            </button>
+
+            <div class="modal fade" id="signInWindow">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Log In</h3>
+                        </div>
+
+                        <!-- body (form) -->
+                        <div class="modal-body">
+                            <form action="signIn" role="form" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Your Username" id="userinfo"
+                                           name="userNameLoginField" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Enter Your Password" id="userPassword"
+                                           name="userPasswordLoginField" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary btn-block" name="logInButton">Log In</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="container-" style="text-align: center ">
+            <button type="button" class="btn btn-primary btn-lg " name="signUpButton " data-toggle="modal" data-target="#signUpWindow">
+                SIGN UP
+            </button>
+
+            <div class="modal fade" id="signUpWindow">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Sign Up to Create an Account</h3>
+                        </div>
+
+                        <!-- body (form) -->
+                        <div class="modal-body">
+                            <form role="form" action="signUp" method="post">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Username (must be in lower-case)" class="form-control" id="username"
+                                           name="userNameField" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter Email address" class="form-control" id="email"
+                                           name="emailField" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="passwordField"
+                                           name="passwordField"
+                                           pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : '');
+                                                   if (this.checkValidity())
+                                                       form.repeatPasswordField.pattern = this.value;"
+                                           placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="repeatPasswordField"
+                                           name="repeatPasswordField"
+                                           pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
+                                           placeholder="Verify Password" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary btn-block" name="signUpButton">SIGN UP</button>                  
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- Button position End -->
+    </body>
+</html>

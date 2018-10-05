@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 5, 2017, 1:20:14 PM
+    Author     : Ratul
+*/
+body{
+    background-color: #eceff0;
+}
+body,
+input{
+    font-family: 'Open Sans', sans-serif;
+    color: #363639;    
+}
+a{
+    text-decoration: none;
+    border-bottom: 1px dashed #363639;
+}
+
+/*lists*/
+.list{
+    background-color: #eff;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+
+.list .header{
+    font-family: 'Cookie', cursive; 
+    margin:0 0 10px 0;
+}
+
+/* items */
+.items{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.items .item.done{
+    text-decoration: line-through;
+}
+
+.items li:hover .done-button{
+    opacity: 1;
+}
+
+.items li,
+.item-add .input{
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+
+.input{
+    width: 100%;
+    
+}
+
+.input:focus{
+    outline: none;
+}
+
+/*done Button*/
+.done-button{
+    display: inline-block; 
+    background-color: #d9dfel;
+    color: #363639;
+    padding:3px 6px;
+    border: 0;
+    opacity: 0.4;
+}
+
+/* Submit Button */
+.submit{
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0 #ddd;
+}
